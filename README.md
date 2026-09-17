@@ -30,6 +30,7 @@ field is null and the app says so, rather than guessing.
 | New York | `region-us-ny` | 24 | 104 KB | [`packs-0.4.0`](https://github.com/bpace/botbot-packs/releases/tag/packs-0.4.0) |
 | New Jersey | `region-us-nj` | 24 | 104 KB | [`packs-0.5.0`](https://github.com/bpace/botbot-packs/releases/tag/packs-0.5.0) |
 | Vermont | `region-us-vt` | 24 | 104 KB | [`packs-0.6.0`](https://github.com/bpace/botbot-packs/releases/tag/packs-0.6.0) |
+| Georgia | `region-us-ga` | 24 | 108 KB | [`packs-0.7.0`](https://github.com/bpace/botbot-packs/releases/tag/packs-0.7.0) |
 
 Each release asset is verified by SHA-256 on the device before it is installed; a
 mismatch aborts the install.
