@@ -50,11 +50,38 @@ Settings → Data attributions.
 - **Wikipedia** — CC BY-SA 4.0 — <https://en.wikipedia.org/>
   Available cited descriptions are English Wikipedia extracts.
 
-Wikipedia-derived text is CC BY-SA 4.0, so redistribution of these packs carries
-the share-alike obligation.
+## Licence
 
-## Model
+The pack files in every release are licensed under
+[Creative Commons Attribution-ShareAlike 4.0 International](LICENSE)
+(CC BY-SA 4.0). The Wikipedia extracts inside them are CC BY-SA, and share-alike
+is the strictest term among the sources, so it governs the whole file. The other
+components are compatible with it:
 
-Embeddings are produced by the BioCLIP ViT-B/16 text tower (MIT licence) using the
-80-template OpenAI ImageNet prompt ensemble. A pack is only compatible with an app
-build whose `model_id` and `embedding_dim` match its `pack_meta`.
+| Component | Source licence | Within the pack |
+|---|---|---|
+| Taxon names, families, GBIF keys | GBIF Backbone — CC BY 4.0 | CC BY-SA 4.0 |
+| USDA symbols and state membership | USDA NRCS PLANTS — CC0 1.0 | CC BY-SA 4.0 |
+| Descriptions | English Wikipedia — CC BY-SA 4.0 | CC BY-SA 4.0 |
+| Taxon embeddings | Output of BioCLIP (MIT); no licence attaches to model output | CC BY-SA 4.0 |
+| Occurrence grid | Derived from GBIF occurrence records; per-record licences (CC0, CC BY, CC BY-NC) are counted in a non-shipping build snapshot | CC BY-SA 4.0 |
+
+If you redistribute a pack, or anything derived from one, keep the `attributions`
+table intact and license the result under CC BY-SA 4.0.
+
+## Model and tooling
+
+Embeddings are produced by the BioCLIP ViT-B/16 text tower using the 80-template
+OpenAI ImageNet prompt ensemble. A pack is only compatible with an app build whose
+`model_id` and `embedding_dim` match its `pack_meta`.
+
+- **BioCLIP** — MIT — <https://huggingface.co/imageomics/bioclip> ·
+  <https://github.com/Imageomics/bioclip> ·
+  Stevens et al., *BioCLIP: A Vision Foundation Model for the Tree of Life*,
+  CVPR 2024, <https://arxiv.org/abs/2311.18803>
+- **open_clip** — MIT — <https://github.com/mlfoundations/open_clip> — loads the
+  model and supplies the `OPENAI_IMAGENET_TEMPLATES` prompt set
+- **OpenAI CLIP** — MIT — <https://github.com/openai/CLIP> — origin of the 80
+  ImageNet prompt templates
+- **SQLite** — public domain — <https://www.sqlite.org/copyright.html> — pack
+  container format
