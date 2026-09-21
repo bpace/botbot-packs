@@ -1,7 +1,7 @@
 # BotBot Knowledge Packs
 
 Public distribution point for the Regional Knowledge Packs used by
-[BotBot](https://github.com/bpace/botbot), an offline plant-identification app.
+the Botanist Bot mobile app, an off/online plant-identification app.
 
 This repository holds no application source. It exists so packs can be fetched
 without authentication; the app itself is private.
